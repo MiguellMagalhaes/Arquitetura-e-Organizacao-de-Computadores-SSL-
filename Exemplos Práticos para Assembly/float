@@ -1,0 +1,11 @@
+.data     #  área de memória principal
+
+	PI : .float 3.141592    #  "float" é single precision 32 Bits
+	
+.text    #  área de memória da CPU
+
+	li $v0, 2     #  li = load imediate - código "2" imprime float 
+	lwc1 $f12, PI    #  Registador  $f12 é utilizado paar imprimir float e double
+		
+		syscall    #  execute! 8 de dezembro
+		

@@ -1,0 +1,19 @@
+							#Atividades Práticas em Linguagem Assembly
+    		
+    		# Exercício "g)" -->  e = ( a - ( b - c ) + f )
+    		
+   .text # começo do programa
+   
+   	li $s0, 6
+   	li $s1, 3
+   	li $s2, 9
+   	li $s5, 1
+   	
+   		sub $t0, $s1, $s2
+   		sub $t1, $s0, $t0
+   		add $s4, $t1, $s5
+   		
+   			li $v0, 1
+   			move $a0, $s4
+   			
+   				syscall

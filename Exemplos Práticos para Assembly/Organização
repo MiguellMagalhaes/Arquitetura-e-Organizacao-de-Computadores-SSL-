@@ -1,0 +1,46 @@
+ #  Atividades Práticas em Linguagem Assembly
+    		# Exercício "a)" usando "float
+    		
+    		  
+.data #dados manipulados na memória RAM
+    		    
+	caractere: .byte 's' #caractere a ser impresso 
+	
+		.text #dados manipulados nos registadores 
+		
+			li $s1, -50 #li = load immediate
+					
+				li $v0, 4 #imprime uma String (cadeia de caracteres) ou apenas um caractere 
+							
+					.text #diretiva que indica que serão inseridas linhas com instruções no nível do processo 
+
+						li $t0, 20 #li = load immediate,. Significa inserção imediata de valor
+	
+							li $t1, 47 #addi $t1, $zero, 47 igual li $t1, 47
+	
+								add $s0, $t0, $t1 #soma de registadores 
+								
+									addi $s1, $s0, 33 #soma com atribuição imediata de valor
+	
+										li $v0, 1 #finaliza o programa 
+										
+											PI : .float 3.141592    #  "float" é single precision 32 Bits
+	
+												.text    #  área de memória da CPU
+
+													li $v0, 2     #  li = load imediate - código "2" imprime float 
+													
+														lwc1 $f12, PI    #  Registador  $f12 é utilizado paar imprimir float e double
+		
+															syscall    #  execute! 8 de dezembro
+															
+																add.s $f5, $f1, $f3    #  add.s = soma de single precision ( float )
+																	
+																	swc1 $f5, numero1      #  swc1 = move $f5  para "numero1" na memória principal 
+	
+																		li $v0, 2    #  código 2 imprime float 
+		
+																			lwc1 $f12, numero1    #  lwc1 = move valor de  "numero1" da memória principal $f12
+			
+	
+				syscall     #  execute!

@@ -1,0 +1,29 @@
+ 								#  Atividades Práticas em Linguagem Assembly
+    		# Exercício "b)" usando "float"
+.data 
+
+	a: .float 6.0
+	b: .float 0.0    
+	c: .float 1.0
+	
+		
+	
+.text 
+	lwc1 $f1, a
+	lwc1 $f3, b
+	lwc1 $f5, c
+	
+		add.s $f3, $f1, $f5
+		swc1 $f3, b
+		
+			li $v0, 2
+			lwc1  $f12, b
+			
+				syscall 
+		
+		
+	
+		
+
+
+	

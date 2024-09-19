@@ -1,0 +1,12 @@
+.text #diretiva que indica que serão inseridas linhas com instruções no nível do processo 
+
+	li $t0, 20 #li = load immediate,. Significa inserção imediata de valor
+	li $t1, 47 #addi $t1, $zero, 47 igual li $t1, 47
+	
+	add $s0, $t0, $t1 #soma de registadores 
+	addi $s1, $s0, 33 #soma com atribuição imediata de valor
+	
+	li $v0, 1 #finaliza o programa 
+	move $a0, $s1
+	syscall 
+	

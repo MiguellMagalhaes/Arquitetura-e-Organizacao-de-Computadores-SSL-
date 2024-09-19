@@ -1,0 +1,15 @@
+									#Atividades Práticas em Linguagem Assembly
+    		
+    		# Exercício "b)" --> b = a + c 	
+    		
+  .text # começo do programa
+  
+  	li $s0, 6 # a = 6
+  	li $s2, 4 # c = 4
+  	
+  		add $t0, $s0, $s2 # a + c
+  		
+  			li $v0, 1
+  			move $a0, $t0
+  			
+  				syscall # Programa finalizado
