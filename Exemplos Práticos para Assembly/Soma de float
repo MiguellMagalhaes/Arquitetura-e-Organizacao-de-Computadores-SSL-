@@ -1,0 +1,19 @@
+.data
+	
+	numero1: .float 10.2
+	numero2: .float 2.0
+	
+.text
+
+	lwc1 $f1, numero1
+	lwc1 $f3, numero2
+	
+		add.s $f5, $f1, $f3    #  add.s = soma de single precision ( float )
+		swc1 $f5, numero1      #  swc1 = move $f5  para "numero1" na memória principal 
+	
+			li $v0, 2    #  código 2 imprime float 
+			lwc1 $f12, numero1    #  lwc1 = move valor de  "numero1" da memória principal $f12
+			
+	
+				syscall     #  execute!
+				

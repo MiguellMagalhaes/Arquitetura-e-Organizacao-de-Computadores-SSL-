@@ -1,0 +1,41 @@
+.data 
+
+	msg1: .asciiz "Qual é a sua idade: "
+	msg2: .asciiz"A sua idade é  "
+	msg3: .asciiz " anos"
+	
+.text
+main:
+	li $v0, 4 #print spring
+	la $a0, msg1
+	syscall
+	
+	
+		li $v0, 5 #read integer
+		syscall
+			
+	
+			move  $t0, $v0
+			
+					
+				li $v0, 1 
+				move $a0,$t0
+				syscall
+					
+	
+					li $v0, 4 #imprimir string
+					la $a0, msg2
+					syscall
+					
+						li $v0, 1 
+						move $a0,$t0
+						syscall
+					
+							li $v0, 4
+							la $a0, msg3
+							syscall
+					
+					
+								li $v0, 10
+								syscall
+	

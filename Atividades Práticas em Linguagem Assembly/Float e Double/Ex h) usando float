@@ -1,0 +1,35 @@
+ 							#  Atividades Práticas em Linguagem Assembly
+    		# Exercício "h)" usando "float"
+.data 
+
+	a: .float 4.0
+	b: .float 5.0    
+	c: .float 3.0
+	e: .float 8.0
+	f: .float 0.0
+		
+	
+.text 
+	lwc1 $f1, a
+	lwc1 $f3, b
+	lwc1 $f5, c
+	lwc1 $f9, e
+	lwc1 $f11, f
+		
+		sub.s $f13, $f1, $f3
+		sub.s $f14, $f3, $f5
+		add.s $f15, $f13,$f14
+		sub.s $f16,$f9,$f15
+		swc1 $f16, f
+		
+			li $v0, 2
+			lwc1  $f12, f
+			
+				syscall 
+		
+		
+	
+		
+
+
+	

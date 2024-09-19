@@ -1,0 +1,20 @@
+								#Atividades Práticas em Linguagem Assembly
+    		
+    		# Exercício "d)" -->  f = ( a + b ) - d
+    		
+   .text # começo do programa
+   
+   
+   	li $s0, 3  
+   	li $s1, 5
+   	li $s3, 8
+   	
+   		add $t0, $s0, $s1 # "( a + b )" está guardado em "$t0", ou seja, $t0 = ( a + b)
+   		sub $s5, $t0, $s3 # ( (a + b) - d ), seja "$s5 = f" e "( a + b ) = $t0"
+   		
+   			li $v0, 1
+   			move $a0, $s5 
+   			
+   				syscall # Finalizar o programa
+   	
+   		

@@ -1,0 +1,16 @@
+.text 
+
+	li $s1, -50 #li = load immediate 
+	li $s2, 100
+	
+		sub $t0, $s1, $s2 # $t0 - $s1 - $s2
+		subi $t5, $s2, 75
+	
+	 		li $v0, 1
+	 		move $a0,$t5
+	 		syscall
+	 		
+	 		 
+	 		  	li $v0, 10
+	 		  	syscall
+	 		  		 
